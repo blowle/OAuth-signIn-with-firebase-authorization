@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		00371FAF2746B6750012FBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FAE2746B6750012FBDF /* AppDelegate.swift */; };
 		00371FB12746B6750012FBDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FB02746B6750012FBDF /* SceneDelegate.swift */; };
-		00371FB32746B6750012FBDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FB22746B6750012FBDF /* ViewController.swift */; };
 		00371FB62746B6750012FBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00371FB42746B6750012FBDF /* Main.storyboard */; };
 		00371FB82746B6810012FBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00371FB72746B6810012FBDF /* Assets.xcassets */; };
 		00371FBB2746B6810012FBDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00371FB92746B6810012FBDF /* LaunchScreen.storyboard */; };
+		00371FC52746B6CE0012FBDF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FC42746B6CE0012FBDF /* LoginVC.swift */; };
+		00371FC82746BD230012FBDF /* EnterEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FC72746BD230012FBDF /* EnterEmailVC.swift */; };
+		00371FCB2746C1470012FBDF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00371FCA2746C1460012FBDF /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00371FAB2746B6750012FBDF /* SpotifyLoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00371FAE2746B6750012FBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00371FB02746B6750012FBDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00371FB22746B6750012FBDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00371FB52746B6750012FBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00371FB72746B6810012FBDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00371FBA2746B6810012FBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00371FBC2746B6810012FBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00371FC42746B6CE0012FBDF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		00371FC72746BD230012FBDF /* EnterEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailVC.swift; sourceTree = "<group>"; };
+		00371FCA2746C1460012FBDF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				00371FAE2746B6750012FBDF /* AppDelegate.swift */,
 				00371FB02746B6750012FBDF /* SceneDelegate.swift */,
-				00371FB22746B6750012FBDF /* ViewController.swift */,
 				00371FB42746B6750012FBDF /* Main.storyboard */,
+				00371FC72746BD230012FBDF /* EnterEmailVC.swift */,
+				00371FCA2746C1460012FBDF /* MainVC.swift */,
+				00371FC42746B6CE0012FBDF /* LoginVC.swift */,
 				00371FB72746B6810012FBDF /* Assets.xcassets */,
 				00371FB92746B6810012FBDF /* LaunchScreen.storyboard */,
 				00371FBC2746B6810012FBDF /* Info.plist */,
@@ -137,9 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00371FB32746B6750012FBDF /* ViewController.swift in Sources */,
+				00371FC82746BD230012FBDF /* EnterEmailVC.swift in Sources */,
+				00371FCB2746C1470012FBDF /* MainVC.swift in Sources */,
 				00371FAF2746B6750012FBDF /* AppDelegate.swift in Sources */,
 				00371FB12746B6750012FBDF /* SceneDelegate.swift in Sources */,
+				00371FC52746B6CE0012FBDF /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
