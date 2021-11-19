@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EnterEmailVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -33,8 +34,47 @@ class EnterEmailVC: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        // Firebase email/password auth
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
         
+        // new user creation
+        Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] authResult, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                let code = (error as NSError).code
+                switch code {
+                case 17007: // already created email
+                    // do login
+                    self.loginUser(withEmail: email, password: password)
+                default:
+                    self.errorMassageLabel.text = error.localizedDescription
+                }
+            } else {
+                self.showMainViewController()
+            }
+        })
+    }
+    
+    private func loginUser(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.errorMassageLabel.text = error.localizedDescription
+            } else {
+                
+            }
+        }
         
+    }
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
+        mainVC.modalPresentationStyle = .fullScreen
+        navigationController?.show(mainVC, sender: nil)
     }
 }
 
