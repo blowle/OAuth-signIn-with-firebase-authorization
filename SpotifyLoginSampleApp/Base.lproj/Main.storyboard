@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F9j-js-9SS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -227,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-KH-YI6">
-                                <rect key="frame" x="175.5" y="483" width="63" height="34"/>
+                                <rect key="frame" x="175.5" y="533" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
@@ -236,17 +237,29 @@
                                     <action selector="logoutButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="Dwd-Et-oCZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qn-ps-Yh0">
+                                <rect key="frame" x="166" y="483" width="82" height="30"/>
+                                <state key="normal" title="비밀번호 변경">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="5be-XB-oCT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d6s-uU-QXC"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mbl-KH-YI6" firstAttribute="top" secondItem="br3-xe-f71" secondAttribute="bottom" constant="20" id="E8o-jP-c4O"/>
+                            <constraint firstItem="4Qn-ps-Yh0" firstAttribute="top" secondItem="br3-xe-f71" secondAttribute="bottom" constant="20" id="Wki-IA-hHc"/>
+                            <constraint firstItem="4Qn-ps-Yh0" firstAttribute="centerX" secondItem="d6s-uU-QXC" secondAttribute="centerX" id="Yev-yV-aiT"/>
                             <constraint firstItem="br3-xe-f71" firstAttribute="centerY" secondItem="lVh-xd-GED" secondAttribute="centerY" id="ZgY-B4-HZf"/>
                             <constraint firstItem="mbl-KH-YI6" firstAttribute="centerX" secondItem="lVh-xd-GED" secondAttribute="centerX" id="gtL-9l-RF9"/>
+                            <constraint firstItem="mbl-KH-YI6" firstAttribute="top" secondItem="4Qn-ps-Yh0" secondAttribute="bottom" constant="20" id="vhU-6G-gFc"/>
                             <constraint firstItem="br3-xe-f71" firstAttribute="centerX" secondItem="lVh-xd-GED" secondAttribute="centerX" id="wNj-r2-5s2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="4Qn-ps-Yh0" id="obU-nM-OHn"/>
                         <outlet property="welcomeLabel" destination="br3-xe-f71" id="tca-Bo-d0a"/>
                     </connections>
                 </viewController>
