@@ -17,7 +17,7 @@ class EnterEmailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextButton.layer.cornerRadius = 30
+        nextButton.layer.cornerRadius = 20
         nextButton.isEnabled = false
         
         emailTextField.delegate = self

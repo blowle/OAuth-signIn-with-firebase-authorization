@@ -48,4 +48,16 @@ class MainVC: UIViewController {
         let email = Auth.auth().currentUser?.email ?? ""
         Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
     }
+    @IBAction func profileUpateButtonTapped(_ sender: Any) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = "고객님"
+        changeRequest?.commitChanges { [weak self] _ in
+            let displayName = Auth.auth().currentUser?.displayName ?? Auth.auth().currentUser?.email ?? "고객"
+            
+            self?.welcomeLabel.text = """
+                환영합니다.
+                \(displayName)님
+                """
+        }
+    }
 }

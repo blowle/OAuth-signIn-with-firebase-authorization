@@ -227,16 +227,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-KH-YI6">
-                                <rect key="frame" x="175.5" y="533" width="63" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="로그아웃">
-                                    <color key="titleColor" systemColor="systemGray6Color"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="Dwd-Et-oCZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qn-ps-Yh0">
                                 <rect key="frame" x="166" y="483" width="82" height="30"/>
                                 <state key="normal" title="비밀번호 변경">
@@ -246,6 +236,25 @@
                                     <action selector="resetPasswordButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="5be-XB-oCT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcv-YL-gv5">
+                                <rect key="frame" x="159.5" y="533" width="95" height="30"/>
+                                <state key="normal" title="닉네임 업데이트">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileUpateButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="bMq-9y-T0f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-KH-YI6">
+                                <rect key="frame" x="175.5" y="583" width="63" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="로그아웃">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="5RT-Bu-IwM" eventType="touchUpInside" id="Dwd-Et-oCZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d6s-uU-QXC"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -253,8 +262,10 @@
                             <constraint firstItem="4Qn-ps-Yh0" firstAttribute="top" secondItem="br3-xe-f71" secondAttribute="bottom" constant="20" id="Wki-IA-hHc"/>
                             <constraint firstItem="4Qn-ps-Yh0" firstAttribute="centerX" secondItem="d6s-uU-QXC" secondAttribute="centerX" id="Yev-yV-aiT"/>
                             <constraint firstItem="br3-xe-f71" firstAttribute="centerY" secondItem="lVh-xd-GED" secondAttribute="centerY" id="ZgY-B4-HZf"/>
+                            <constraint firstItem="lcv-YL-gv5" firstAttribute="top" secondItem="4Qn-ps-Yh0" secondAttribute="bottom" constant="20" id="dTC-gN-LQP"/>
                             <constraint firstItem="mbl-KH-YI6" firstAttribute="centerX" secondItem="lVh-xd-GED" secondAttribute="centerX" id="gtL-9l-RF9"/>
-                            <constraint firstItem="mbl-KH-YI6" firstAttribute="top" secondItem="4Qn-ps-Yh0" secondAttribute="bottom" constant="20" id="vhU-6G-gFc"/>
+                            <constraint firstItem="mbl-KH-YI6" firstAttribute="top" secondItem="lcv-YL-gv5" secondAttribute="bottom" constant="20" id="mBg-Sn-zAM"/>
+                            <constraint firstItem="lcv-YL-gv5" firstAttribute="centerX" secondItem="lVh-xd-GED" secondAttribute="centerX" id="t76-jz-Rg2"/>
                             <constraint firstItem="br3-xe-f71" firstAttribute="centerX" secondItem="lVh-xd-GED" secondAttribute="centerX" id="wNj-r2-5s2"/>
                         </constraints>
                     </view>
